@@ -84,3 +84,4 @@ CHANGELOG:
 - 2026-09-28 — changed meta-instruction: README leads with visuals; instructions live in a linked guide
 - 2026-09-29 — built: Eleventy static blog, sample posts, README and docs/GUIDE.md; filled in assumptions
 - 2026-09-29 — published to GitHub (public) with a GitHub Pages deploy workflow
+- 2026-09-30 — bumped the deploy workflow's GitHub Actions to their current major versions
