@@ -34,7 +34,7 @@ The three posts in `src/posts/` are samples, so replace or delete them.
 
 ## Site settings
 
-Edit `src/_data/metadata.js` to set the title, description, author and `url`. Set `url` to the real address before you publish, because the feed uses it to build links.
+Edit `src/_data/metadata.js` to set the title, description, author and `url` (the live address; the feed uses it to build links).
 
 ## Where things live
 
@@ -48,4 +48,14 @@ Edit `src/_data/metadata.js` to set the title, description, author and `url`. Se
 
 ## Publishing
 
-`npm run build` produces a static `_site/` folder that any static host can serve, such as GitHub Pages, Netlify, Cloudflare Pages or your own server. The feed is at `/feed.xml`.
+The site is live at **https://amalmehta.github.io/personal-blog/**.
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages. To publish a post, commit it and push:
+
+```bash
+git add src/posts && git commit -m "New post: My first idea" && git push
+```
+
+The Actions tab on GitHub shows each deploy. Because the site lives under `/personal-blog/`, the workflow builds with `PATH_PREFIX=/personal-blog/`, and every link picks that up automatically. Locally the site is served from `/`.
+
+To host it somewhere else, run `npm run build` (setting `PATH_PREFIX` if the site isn't at the root of its domain) and upload `_site/`.

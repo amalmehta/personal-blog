@@ -1,3 +1,4 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import markdownItKatex from "@vscode/markdown-it-katex";
@@ -6,6 +7,8 @@ import metadata from "./src/_data/metadata.js";
 const SECTION_TAGS = ["learning", "musing", "explanation"];
 
 export default function (eleventyConfig) {
+  // Rewrites root-relative links to include the path prefix (e.g. /personal-blog/ on GitHub Pages).
+  eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.amendLibrary("md", (md) => md.use(markdownItKatex.default ?? markdownItKatex));
 
@@ -17,7 +20,8 @@ export default function (eleventyConfig) {
       language: metadata.language,
       title: metadata.title,
       subtitle: metadata.description,
-      base: metadata.url,
+      // Origin only: the path prefix is added to each link separately.
+      base: new URL(metadata.url).origin + "/",
       author: { name: metadata.author },
     },
   });
@@ -51,6 +55,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: "src", output: "_site" },
+    pathPrefix: process.env.PATH_PREFIX || "/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };

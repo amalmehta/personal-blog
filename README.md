@@ -8,4 +8,6 @@
 
 A clean, simple static blog for learnings, musings and explanations. You write posts in Markdown and [Eleventy](https://www.11ty.dev/) turns them into plain HTML, with code highlighting, KaTeX math, tags, an Atom feed and automatic dark mode.
 
+Live at **https://amalmehta.github.io/personal-blog/**.
+
 Setup, writing posts and publishing are covered in the **[Guide](docs/GUIDE.md)**.

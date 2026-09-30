@@ -48,7 +48,9 @@ Decided with the owner (2026-09-29):
 - Built with Eleventy 3 (Nunjucks templates, Markdown posts).
 - Extras: build-time code highlighting (Prism), KaTeX math, tags, an Atom feed
   and automatic dark mode.
-- Site title is "Amal Mehta". Local git repo only; nothing is pushed.
+- Site title is "Amal Mehta".
+- Public GitHub repo amalmehta/personal-blog, deployed to GitHub Pages by a
+  GitHub Actions workflow on every push to main (asked for 2026-09-29).
 
 Decided without asking:
 - Tags are learning, musing and explanation, and each gets a page and a header
@@ -57,13 +59,12 @@ Decided without asking:
 - The KaTeX CSS and fonts are served locally (no CDN) and only load on pages
   that contain math.
 - Three sample posts (one per tag) show the features and are marked as samples.
-- The site URL in src/_data/metadata.js is a placeholder (https://example.com/)
-  until the real address is known.
+- The repo is public: Pages on a free account needs that, and the user asked to
+  "open it up".
 - Fonts are system fonts (a serif for body text, a sans-serif for UI), so no
   web fonts load.
 
 Proposals (not done):
-- Push to GitHub and add a GitHub Pages deploy workflow.
 - An About page.
 - A manual light/dark toggle.
 
@@ -82,3 +83,4 @@ CHANGELOG:
 - 2026-09-28 — added meta-instruction: name things like a person would, never snake_case
 - 2026-09-28 — changed meta-instruction: README leads with visuals; instructions live in a linked guide
 - 2026-09-29 — built: Eleventy static blog, sample posts, README and docs/GUIDE.md; filled in assumptions
+- 2026-09-29 — published to GitHub (public) with a GitHub Pages deploy workflow
