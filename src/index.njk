@@ -1,0 +1,6 @@
+---
+layout: base.njk
+---
+<p class="intro">{{ metadata.description }}</p>
+{% set postList = collections.posts %}
+{% include "post-list.njk" %}

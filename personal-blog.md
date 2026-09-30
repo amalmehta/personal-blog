@@ -1,0 +1,84 @@
+PROJECT NAME: personal-blog
+
+META-INSTRUCTIONS:
+
+<Read it all before acting. Ask about anything unclear, contradictory or
+ underspecified — before starting and mid-build. Ask in the question widget
+ (AskUserQuestion): related questions batched, concrete options, your
+ recommendation first. Plain text only if the widget isn't available.>
+
+<Don't expand scope. Anything not listed here is a proposal, including changes
+ to this file — propose it, don't do it.>
+
+<Prefer doing over describing: run the code, write the files, test it.>
+
+<Always in scope, no proposal needed: when it goes on GitHub, a short README
+ that leads with visuals (screenshots, a diagram or a chart) and a line on what
+ it is, linking to docs/GUIDE.md for setup and usage; and a small unobtrusive
+ feedback tab if what you're building is an application rather than a script.>
+
+<If what you're building is an application, build it as a Mac app first; the
+ website comes after, as its own step.>
+
+<Name things the way a person would say them — "Goal Tracker", not
+ goal_tracker — for the app, its windows, titles, files people open, repo
+ descriptions and README headings. Where a name can't hold spaces (repo names,
+ bundle IDs), use hyphens, never underscores.>
+
+<Finish by listing every deliverable: path, what it is, how to check it works.>
+
+<Git rules (no Claude attribution, never commit .claude/) are in
+ ~/.claude/CLAUDE.md and apply on their own — nothing to repeat here.>
+
+<Keep the changelog at the bottom current.>
+
+CONTEXT:
+
+blog to describe learnings / musings / explanatsions 
+
+clean and simple
+
+OPEN QUESTIONS / ASSUMPTIONS:
+
+<Agent fills in: what it guessed, what it decided without asking.>
+
+Decided with the owner (2026-09-29):
+- Static website only. A blog is a site, not an application, so there is no Mac
+  app step and no feedback tab.
+- Built with Eleventy 3 (Nunjucks templates, Markdown posts).
+- Extras: build-time code highlighting (Prism), KaTeX math, tags, an Atom feed
+  and automatic dark mode.
+- Site title is "Amal Mehta". Local git repo only; nothing is pushed.
+
+Decided without asking:
+- Tags are learning, musing and explanation, and each gets a page and a header
+  link. Any new tag in a post gets a page automatically.
+- Dark mode follows the system setting. There is no toggle.
+- The KaTeX CSS and fonts are served locally (no CDN) and only load on pages
+  that contain math.
+- Three sample posts (one per tag) show the features and are marked as samples.
+- The site URL in src/_data/metadata.js is a placeholder (https://example.com/)
+  until the real address is known.
+- Fonts are system fonts (a serif for body text, a sans-serif for UI), so no
+  web fonts load.
+
+Proposals (not done):
+- Push to GitHub and add a GitHub Pages deploy workflow.
+- An About page.
+- A manual light/dark toggle.
+
+CHANGELOG:
+
+- 2026-09-29 — created
+- 2026-09-15 — added meta-instruction: built-out applications include a small feedback tab
+- 2026-09-15 — added meta-instruction: no "Claude" attribution in commits, PRs, or branches
+- 2026-09-16 — added meta-instruction: always include a README when adding to GitHub
+- 2026-09-16 — changed meta-instruction: ask clarifying questions in the question widget
+- 2026-09-17 — added meta-instructions: Claude never a contributor; never commit .claude/
+- 2026-09-26 — compressed the meta-instructions and every field prompt; git rules moved to the global instruction file
+- 2026-09-27 — added meta-instruction: applications are built as a Mac app first, then a website
+- 2026-09-28 — folded inputs, instructions, constraints, deliverables and done criteria into one free-form CONTEXT
+- 2026-09-28 — changed meta-instruction: a README on GitHub always includes a visual
+- 2026-09-28 — added meta-instruction: name things like a person would, never snake_case
+- 2026-09-28 — changed meta-instruction: README leads with visuals; instructions live in a linked guide
+- 2026-09-29 — built: Eleventy static blog, sample posts, README and docs/GUIDE.md; filled in assumptions

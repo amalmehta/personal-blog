@@ -1,0 +1,13 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: "{{ tag | capitalize }}"
+---
+<h1 class="page-title">{{ tag | capitalize }}</h1>
+{% set postList = collections[tag] %}
+{% include "post-list.njk" %}

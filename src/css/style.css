@@ -1,0 +1,94 @@
+:root {
+  --bg: #fdfcfa;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #2f5d8a;
+  --rule: #e6e3dd;
+  --code-bg: #f3f1ec;
+  --tok-comment: #8a8a80;
+  --tok-keyword: #8a3f8f;
+  --tok-string: #3f7a3a;
+  --tok-number: #a0521d;
+  --tok-function: #2f5d8a;
+  --measure: 40rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a;
+    --text: #e4e2dd;
+    --muted: #9a9892;
+    --accent: #8ab4dc;
+    --rule: #2c2d30;
+    --code-bg: #202226;
+    --tok-comment: #7d7f84;
+    --tok-keyword: #d19ad6;
+    --tok-string: #9fcf8f;
+    --tok-number: #e3a574;
+    --tok-function: #8ab4dc;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0 auto;
+  max-width: calc(var(--measure) + 2rem);
+  padding: 0 1rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.0625rem/1.7 Charter, "Iowan Old Style", Georgia, serif;
+}
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+.site-header, .site-footer, .meta, .post-list time, nav, .back, .intro {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.site-header {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 0.5rem 1.5rem; padding: 2.5rem 0 1.5rem; border-bottom: 1px solid var(--rule);
+}
+.site-title { font-weight: 650; font-size: 1.15rem; color: var(--text); text-decoration: none; }
+nav { display: flex; gap: 1rem; font-size: 0.9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--text); }
+
+main { padding: 2rem 0 3rem; }
+.intro { color: var(--muted); margin: 0 0 2rem; }
+.page-title { font-size: 1.5rem; margin: 0 0 1.5rem; }
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.post-list li:last-child { border-bottom: 0; }
+.post-list time { display: block; font-size: 0.8rem; color: var(--muted); }
+.post-list a { font-size: 1.15rem; text-decoration: none; color: var(--text); }
+.post-list a:hover { color: var(--accent); }
+.post-list p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.post h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
+.meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 2rem; }
+.meta a { color: var(--muted); }
+.post h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
+.post h3 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+.post img { max-width: 100%; height: auto; }
+blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+.back { font-size: 0.9rem; }
+
+code { font: 0.88em/1.5 ui-monospace, "SF Mono", Menlo, monospace; background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 4px; }
+pre[class*="language-"], pre { background: var(--code-bg); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1.5rem 0; }
+pre code { background: none; padding: 0; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0; }
+
+/* Syntax highlighting (Prism tokens) */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: var(--tok-comment); font-style: italic; }
+.token.keyword, .token.boolean, .token.important, .token.atrule, .token.selector { color: var(--tok-keyword); }
+.token.string, .token.char, .token.attr-value, .token.regex, .token.inserted { color: var(--tok-string); }
+.token.number, .token.constant, .token.symbol, .token.deleted { color: var(--tok-number); }
+.token.function, .token.class-name, .token.tag, .token.builtin { color: var(--tok-function); }
+.token.punctuation, .token.operator { color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--rule); padding: 1.5rem 0 3rem; font-size: 0.85rem; color: var(--muted); }
+.site-footer a { color: var(--muted); }
