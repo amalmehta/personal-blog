@@ -64,8 +64,10 @@ Decided without asking:
 - Fonts are system fonts (a serif for body text, a sans-serif for UI), so no
   web fonts load.
 
+- The About page (asked for 2026-09-30) only says what the blog is and links to
+  the three tags; no bio or contact details were invented.
+
 Proposals (not done):
-- An About page.
 - A manual light/dark toggle.
 
 CHANGELOG:
@@ -85,3 +87,4 @@ CHANGELOG:
 - 2026-09-29 — built: Eleventy static blog, sample posts, README and docs/GUIDE.md; filled in assumptions
 - 2026-09-29 — published to GitHub (public) with a GitHub Pages deploy workflow
 - 2026-09-30 — bumped the deploy workflow's GitHub Actions to their current major versions
+- 2026-09-30 — added an About page and a header link to it

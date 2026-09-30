@@ -41,8 +41,9 @@ Edit `src/_data/metadata.js` to set the title, description, author and `url` (th
 | Path | What it is |
 | --- | --- |
 | `src/posts/` | Posts |
-| `src/_includes/` | Page templates (`base.njk`, `post.njk`, `post-list.njk`) |
+| `src/_includes/` | Page templates (`base.njk`, `post.njk`, `page.njk`, `post-list.njk`) |
 | `src/index.njk`, `src/tags.njk` | Home page and tag pages |
+| `src/about.md` | The About page |
 | `src/css/style.css` | All styling, including light and dark colors |
 | `eleventy.config.js` | Plugins, filters and the feed |
 

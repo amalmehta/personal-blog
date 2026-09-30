@@ -68,6 +68,7 @@ main { padding: 2rem 0 3rem; }
 .post-list p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
 
 .post h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
+.post > h1 { margin-bottom: 1.5rem; }
 .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 2rem; }
 .meta a { color: var(--muted); }
 .post h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
