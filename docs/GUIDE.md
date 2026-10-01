@@ -36,6 +36,10 @@ The three posts in `src/posts/` are samples, so replace or delete them.
 
 Edit `src/_data/metadata.js` to set the title, description, author and `url` (the live address; the feed uses it to build links).
 
+## Light and dark
+
+The site follows the system setting. The ◐ button in the header switches theme, and the browser remembers the choice. The colors for both themes are at the top of `src/css/style.css`; the dark set appears twice (once for the system setting, once for the button), so change both together.
+
 ## Where things live
 
 | Path | What it is |

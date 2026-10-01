@@ -13,8 +13,10 @@
   --measure: 40rem;
   color-scheme: light;
 }
+/* Dark colors: used when the system is dark (unless the toggle chose light),
+   or when the toggle chose dark. Keep the two blocks the same. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #17181a;
     --text: #e4e2dd;
     --muted: #9a9892;
@@ -28,6 +30,20 @@
     --tok-function: #8ab4dc;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #17181a;
+  --text: #e4e2dd;
+  --muted: #9a9892;
+  --accent: #8ab4dc;
+  --rule: #2c2d30;
+  --code-bg: #202226;
+  --tok-comment: #7d7f84;
+  --tok-keyword: #d19ad6;
+  --tok-string: #9fcf8f;
+  --tok-number: #e3a574;
+  --tok-function: #8ab4dc;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -51,9 +67,11 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 0.5rem 1.5rem; padding: 2.5rem 0 1.5rem; border-bottom: 1px solid var(--rule);
 }
 .site-title { font-weight: 650; font-size: 1.15rem; color: var(--text); text-decoration: none; }
-nav { display: flex; gap: 1rem; font-size: 0.9rem; }
+nav { display: flex; align-items: baseline; gap: 1rem; font-size: 0.9rem; }
 nav a { color: var(--muted); text-decoration: none; }
 nav a:hover, nav a[aria-current] { color: var(--text); }
+.theme-toggle { font: inherit; line-height: 1; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.theme-toggle:hover { color: var(--text); }
 
 main { padding: 2rem 0 3rem; }
 .intro { color: var(--muted); margin: 0 0 2rem; }

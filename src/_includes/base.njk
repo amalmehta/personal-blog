@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}{{ metadata.title }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
+  <script>
+    // Apply a saved theme before the page paints, so there's no flash.
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
   <link rel="stylesheet" href="/css/style.css">
   {% if 'class="katex"' in content %}<link rel="stylesheet" href="/css/katex/katex.min.css">{% endif %}
   <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ metadata.title }}">
@@ -16,6 +20,7 @@
       {% for tag in collections.tagList %}<a href="/tags/{{ tag | slugify }}/"{% if page.url == "/tags/" + (tag | slugify) + "/" %} aria-current="page"{% endif %}>{{ tag }}</a>{% endfor %}
       <a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>about</a>
       <a href="/feed.xml">feed</a>
+      <button class="theme-toggle" type="button" hidden aria-label="Switch between light and dark theme" title="Switch theme">◐</button>
     </nav>
   </header>
   <main>
@@ -24,5 +29,17 @@
   <footer class="site-footer">
     {{ metadata.author }} · <a href="/feed.xml">RSS</a>
   </footer>
+  <script>
+    {
+      const root = document.documentElement;
+      const button = document.querySelector(".theme-toggle");
+      const isDark = () => (root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark";
+      button.hidden = false;
+      button.addEventListener("click", () => {
+        root.dataset.theme = isDark() ? "light" : "dark";
+        try { localStorage.setItem("theme", root.dataset.theme); } catch {}
+      });
+    }
+  </script>
 </body>
 </html>

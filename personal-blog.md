@@ -55,7 +55,8 @@ Decided with the owner (2026-09-29):
 Decided without asking:
 - Tags are learning, musing and explanation, and each gets a page and a header
   link. Any new tag in a post gets a page automatically.
-- Dark mode follows the system setting. There is no toggle.
+- Dark mode follows the system setting. A ◐ button in the header overrides it
+  and the choice is saved in the browser (toggle asked for 2026-09-30).
 - The KaTeX CSS and fonts are served locally (no CDN) and only load on pages
   that contain math.
 - Three sample posts (one per tag) show the features and are marked as samples.
@@ -68,7 +69,7 @@ Decided without asking:
   the three tags; no bio or contact details were invented.
 
 Proposals (not done):
-- A manual light/dark toggle.
+(none open)
 
 CHANGELOG:
 
@@ -88,3 +89,4 @@ CHANGELOG:
 - 2026-09-29 — published to GitHub (public) with a GitHub Pages deploy workflow
 - 2026-09-30 — bumped the deploy workflow's GitHub Actions to their current major versions
 - 2026-09-30 — added an About page and a header link to it
+- 2026-09-30 — added a light/dark toggle to the header
