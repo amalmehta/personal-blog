@@ -2,7 +2,8 @@
   --bg: #fdfcfa;
   --text: #1f1f1f;
   --muted: #6b6b6b;
-  --accent: #2f5d8a;
+  --accent: #1d6b66;
+  --accent-soft: #dcefec;
   --rule: #e6e3dd;
   --code-bg: #f3f1ec;
   --tok-comment: #8a8a80;
@@ -20,7 +21,8 @@
     --bg: #17181a;
     --text: #e4e2dd;
     --muted: #9a9892;
-    --accent: #8ab4dc;
+    --accent: #6cc4bb;
+    --accent-soft: #1d3a38;
     --rule: #2c2d30;
     --code-bg: #202226;
     --tok-comment: #7d7f84;
@@ -35,7 +37,8 @@
   --bg: #17181a;
   --text: #e4e2dd;
   --muted: #9a9892;
-  --accent: #8ab4dc;
+  --accent: #6cc4bb;
+  --accent-soft: #1d3a38;
   --rule: #2c2d30;
   --code-bg: #202226;
   --tok-comment: #7d7f84;
@@ -47,7 +50,8 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; border-top: 3px solid var(--accent); }
+::selection { background: var(--accent-soft); }
 body {
   margin: 0 auto;
   max-width: calc(var(--measure) + 2rem);
@@ -69,7 +73,8 @@ a:hover { text-decoration-thickness: 2px; }
 .site-title { font-weight: 650; font-size: 1.15rem; color: var(--text); text-decoration: none; }
 nav { display: flex; align-items: baseline; gap: 1rem; font-size: 0.9rem; }
 nav a { color: var(--muted); text-decoration: none; }
-nav a:hover, nav a[aria-current] { color: var(--text); }
+nav a:hover { color: var(--text); }
+nav a[aria-current] { color: var(--accent); }
 .theme-toggle { font: inherit; line-height: 1; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
 .theme-toggle:hover { color: var(--text); }
 
@@ -80,7 +85,7 @@ main { padding: 2rem 0 3rem; }
 .post-list { list-style: none; margin: 0; padding: 0; }
 .post-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
 .post-list li:last-child { border-bottom: 0; }
-.post-list time { display: block; font-size: 0.8rem; color: var(--muted); }
+.post-list time { display: block; font-size: 0.8rem; color: var(--accent); }
 .post-list a { font-size: 1.15rem; text-decoration: none; color: var(--text); }
 .post-list a:hover { color: var(--accent); }
 .post-list p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
@@ -88,11 +93,11 @@ main { padding: 2rem 0 3rem; }
 .post h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
 .post > h1 { margin-bottom: 1.5rem; }
 .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 2rem; }
-.meta a { color: var(--muted); }
+.meta a { color: var(--accent); }
 .post h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
 .post h3 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
 .post img { max-width: 100%; height: auto; }
-blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
 hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 .back { font-size: 0.9rem; }
 
