@@ -53,8 +53,11 @@ Decided with the owner (2026-09-29):
   GitHub Actions workflow on every push to main (asked for 2026-09-29).
 
 Decided without asking:
-- Tags are learning, musing and explanation, and each gets a page and a header
-  link. Any new tag in a post gets a page automatically.
+- Tags are history, art and architecture (changed from learning, musing and
+  explanation on 2026-10-08, at the owner's request), and each gets a page and a
+  header link. Any new tag in a post gets a page automatically.
+- Until a real post replaces them, "Hello, world" carries all three tags so
+  each topic has a page; the code and math samples are untagged.
 - Dark mode follows the system setting. A ◐ button in the header overrides it
   and the choice is saved in the browser (toggle asked for 2026-09-30).
 - The KaTeX CSS and fonts are served locally (no CDN) and only load on pages
@@ -90,3 +93,4 @@ CHANGELOG:
 - 2026-09-30 — bumped the deploy workflow's GitHub Actions to their current major versions
 - 2026-09-30 — added an About page and a header link to it
 - 2026-09-30 — added a light/dark toggle to the header
+- 2026-10-08 — replaced the learning/musing/explanation tags with history, art and architecture

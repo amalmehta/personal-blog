@@ -1,8 +1,7 @@
 ---
 title: Debounce in a few lines
-description: A sample learning post showing syntax-highlighted code.
+description: A sample post showing syntax-highlighted code.
 date: 2026-09-24
-tags: learning
 ---
 
 *This is a sample post showing how code blocks look.*
