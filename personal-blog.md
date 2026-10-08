@@ -71,6 +71,10 @@ Decided without asking:
 - The About page (asked for 2026-09-30) only says what the blog is and links to
   the three tags; no bio or contact details were invented.
 
+- Accent color ("a tinge of color", asked for 2026-10-01): one deep teal,
+  used only for a 3px top bar, post-list dates, links, the post's tag link, the
+  current header link, quote borders and text selection.
+
 Proposals (not done):
 (none open)
 
@@ -93,4 +97,5 @@ CHANGELOG:
 - 2026-09-30 — bumped the deploy workflow's GitHub Actions to their current major versions
 - 2026-09-30 — added an About page and a header link to it
 - 2026-09-30 — added a light/dark toggle to the header
+- 2026-10-01 — added a teal accent color in a few small places
 - 2026-10-08 — replaced the learning/musing/explanation tags with history, art and architecture
