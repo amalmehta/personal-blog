@@ -4,7 +4,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import markdownItKatex from "@vscode/markdown-it-katex";
 import metadata from "./src/_data/metadata.js";
 
-const SECTION_TAGS = ["learning", "musing", "explanation"];
+const SECTION_TAGS = ["history", "art", "architecture"];
 
 export default function (eleventyConfig) {
   // Rewrites root-relative links to include the path prefix (e.g. /personal-blog/ on GitHub Pages).

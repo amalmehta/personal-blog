@@ -2,7 +2,7 @@
   "name": "personal-blog",
   "version": "1.0.0",
   "private": true,
-  "description": "Amal Mehta's personal blog: learnings, musings and explanations.",
+  "description": "Amal Mehta's personal blog: history, art and architecture.",
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
