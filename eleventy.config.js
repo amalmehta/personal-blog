@@ -28,6 +28,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy({
+    "src/favicon.svg": "favicon.svg",
+    "src/favicon.ico": "favicon.ico",
+    "src/apple-touch-icon.png": "apple-touch-icon.png",
+  });
+  eleventyConfig.addPassthroughCopy({
     "node_modules/katex/dist/katex.min.css": "css/katex/katex.min.css",
     "node_modules/katex/dist/fonts": "css/katex/fonts",
   });

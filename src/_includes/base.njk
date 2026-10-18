@@ -9,6 +9,9 @@
     // Apply a saved theme before the page paints, so there's no flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
   </script>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/style.css">
   {% if 'class="katex"' in content %}<link rel="stylesheet" href="/css/katex/katex.min.css">{% endif %}
   <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ metadata.title }}">
