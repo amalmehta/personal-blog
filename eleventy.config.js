@@ -4,7 +4,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import markdownItKatex from "@vscode/markdown-it-katex";
 import metadata from "./src/_data/metadata.js";
 
-const SECTION_TAGS = ["learning", "musing", "explanation"];
+const SECTION_TAGS = ["history", "art", "architecture"];
 
 export default function (eleventyConfig) {
   // Rewrites root-relative links to include the path prefix (e.g. /personal-blog/ on GitHub Pages).
@@ -27,6 +27,11 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy({
+    "src/favicon.svg": "favicon.svg",
+    "src/favicon.ico": "favicon.ico",
+    "src/apple-touch-icon.png": "apple-touch-icon.png",
+  });
   eleventyConfig.addPassthroughCopy({
     "node_modules/katex/dist/katex.min.css": "css/katex/katex.min.css",
     "node_modules/katex/dist/fonts": "css/katex/fonts",

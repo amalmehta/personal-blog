@@ -1,8 +1,7 @@
 ---
 title: Why compound growth feels slow, then sudden
-description: A sample explanation post showing math rendering.
+description: A sample post showing math rendering.
 date: 2026-09-28
-tags: explanation
 ---
 
 *This is a sample post showing how math looks.*

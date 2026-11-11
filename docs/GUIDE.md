@@ -19,13 +19,13 @@ Add a Markdown file to `src/posts/`. The file name becomes the URL, so `src/post
 title: My first idea
 description: One line that shows under the title in post lists.
 date: 2026-10-01
-tags: learning
+tags: history
 ---
 
 Your post, in Markdown.
 ```
 
-- **tags**: `learning`, `musing` or `explanation`. A post can have several (`tags: [learning, explanation]`). Each tag gets a page at `/tags/<tag>/` and a link in the header. A new tag name creates its own page automatically.
+- **tags**: `history`, `art` or `architecture`. A post can have several (`tags: [art, architecture]`). Each tag gets a page at `/tags/<tag>/` and a link in the header. A new tag name creates its own page automatically.
 - **Code**: fenced code blocks with a language (```` ```js ````, ```` ```python ````, and so on) are highlighted at build time.
 - **Math**: `$inline$` and `$$display$$` use KaTeX. The KaTeX stylesheet only loads on pages that contain math.
 - **Drafts**: to keep a post off the site, add `permalink: false` and `eleventyExcludeFromCollections: true` to its front matter.
